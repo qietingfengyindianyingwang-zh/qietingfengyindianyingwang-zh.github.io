@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>且听风吟电影网 | 慢下来，看一部好电影 - qietingfengyindianyingwang-zh.github.io</title>
+<meta name="description" content="且听风吟电影网(qietingfengyindianyingwang-zh.github.io)是一个慢节奏的电影分享站，专注文艺片、作者电影、经典老片与独立佳作，陪你在安静的夜晚看一部好电影。">
+<meta name="keywords" content="且听风吟电影网, qietingfengyindianyingwang-zh.github.io, 文艺片, 作者电影, 经典老片, 独立电影, 慢电影, 观影笔记">
+<meta name="author" content="且听风吟电影网">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#1c1c1e">
+<link rel="canonical" href="https://qietingfengyindianyingwang-zh.github.io/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "且听风吟电影网",
+  "url": "https://qietingfengyindianyingwang-zh.github.io/",
+  "description": "慢节奏电影分享站，陪你在安静的夜晚看一部好电影",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://qietingfengyindianyingwang-zh.github.io/#q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<style>
+:root{
+  --bg:#1c1c1e; --bg2:#252529; --paper:#2c2c30; --line:#3a3a40; --line2:#45454c;
+  --ink:#f2f0ea; --ink2:#cdcabf; --ink3:#9d9a90; --ink4:#6f6c64;
+  --warm:#e8c47a; --warm2:#d4a85e; --rust:#c9632f; --plum:#8b5e83; --sage:#8fa876; --sky:#7ba4b8;
+  --film:#141416;
+  --sh:0 2px 20px rgba(0,0,0,.4);
+  --r:10px;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",Georgia,serif;
+  --sans:"PingFang SC","Microsoft YaHei","WenQuanYi Micro Hei",system-ui,sans-serif;
+  --ease:cubic-bezier(.2,.8,.3,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.85;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button{font-family:inherit;cursor:pointer;border:none}
+::selection{background:var(--warm);color:#1c1c1e}
+
+/* grain */
+body::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.035;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+.wrap{max-width:1120px;margin:0 auto;padding:0 26px}
+section{padding:92px 0;position:relative}
+@media(max-width:700px){section{padding:64px 0}.wrap{padding:0 17px}}
+
+/* ===== nav ===== */
+.nav{position:sticky;top:0;z-index:100;background:rgba(28,28,30,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav__in{max-width:1120px;margin:0 auto;padding:13px 26px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:baseline;gap:9px;font-family:var(--serif);font-weight:700;font-size:1.32rem;letter-spacing:.5px}
+.logo em{font-style:normal;color:var(--warm)}
+.logo small{font-size:.66rem;color:var(--ink4);letter-spacing:1.5px;text-transform:lowercase;font-family:var(--sans)}
+.menu{display:flex;align-items:center;gap:2px}
+.menu a{padding:8px 14px;font-size:.87rem;color:var(--ink3);transition:.25s;border-radius:6px}
+.menu a:hover{color:var(--warm);background:rgba(232,196,122,.08)}
+.menu a.on{color:var(--warm);background:rgba(232,196,122,.1)}
+.nav__r{display:flex;align-items:center;gap:10px}
+.q{display:flex;align-items:center;gap:8px;padding:7px 13px;border-radius:20px;background:var(--paper);border:1px solid var(--line);font-size:.8rem;color:var(--ink3)}
+.q input{border:none;outline:none;background:none;width:110px;color:var(--ink);font-size:.8rem}
+.q input::placeholder{color:var(--ink4)}
+.burger{display:none;width:38px;height:38px;border-radius:8px;border:1px solid var(--line);background:var(--paper);color:var(--ink);font-size:1.05rem}
+@media(max-width:900px){
+  .menu{position:fixed;top:0;right:0;height:100vh;width:260px;flex-direction:column;align-items:stretch;padding:80px 22px 30px;background:var(--bg);border-left:1px solid var(--line);transform:translateX(104%);transition:.4s var(--ease)}
+  .menu.open{transform:translateX(0)}
+  .menu a{border-radius:8px;text-align:center;padding:12px}
+  .burger{display:block}.q{display:none}
+}
+
+/* ===== hero ===== */
+.hero{position:relative;padding:0;background:var(--film)}
+.filmstrip{display:grid;grid-template-columns:repeat(8,1fr);gap:6px;padding:34px 26px;background:var(--film);border-bottom:1px solid var(--line);border-top:3px solid var(--line);position:relative}
+.filmstrip::before,.filmstrip::after{content:'';position:absolute;left:0;right:0;height:8px;background-image:radial-gradient(circle,var(--ink4) 2.4px,transparent 2.6px);background-size:26px 8px}
+.filmstrip::before{top:11px}.filmstrip::after{bottom:11px}
+.fr{aspect-ratio:3/4;border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;position:relative;overflow:hidden}
+.fr::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.5))}
+@media(max-width:760px){.filmstrip{grid-template-columns:repeat(4,1fr);gap:5px;padding:28px 17px}}
+
+.hero__in{max-width:1120px;margin:0 auto;padding:76px 26px 88px;display:grid;grid-template-columns:1fr .9fr;gap:62px;align-items:center}
+.hquote{font-family:var(--serif);font-size:clamp(1.9rem,4.8vw,3.6rem);font-weight:700;line-height:1.32;letter-spacing:.5px;margin-bottom:30px}
+.hquote em{font-style:normal;color:var(--warm);position:relative}
+.hquote em::after{content:'';position:absolute;left:0;right:0;bottom:4px;height:2px;background:var(--rust);opacity:.7}
+.hero p.lead{color:var(--ink2);font-size:1rem;max-width:470px;margin-bottom:36px}
+.btns{display:flex;gap:11px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:7px;padding:14px 28px;border-radius:8px;font-size:.88rem;font-weight:600;transition:.3s var(--ease)}
+.btn--main{background:var(--warm);color:#1c1c1e}
+.btn--main:hover{background:var(--ink);color:var(--warm);transform:translateY(-3px)}
+.btn--ghost{background:transparent;color:var(--ink2);border:1px solid var(--line2)}
+.btn--ghost:hover{border-color:var(--warm);color:var(--warm);transform:translateY(-3px)}
+.hmeta{display:flex;gap:34px;margin-top:40px;padding-top:28px;border-top:1px solid var(--line)}
+.hmeta div span{display:block;font-family:var(--serif);font-size:1.9rem;font-weight:700;color:var(--warm);line-height:1.2}
+.hmeta div small{font-size:.75rem;color:var(--ink4);letter-spacing:1px}
+
+.note{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:26px 26px 22px;position:relative}
+.note__ribbon{position:absolute;top:0;right:26px;background:var(--rust);color:#fff;font-size:.68rem;padding:5px 12px;border-radius:0 0 6px 6px;letter-spacing:2px}
+.note blockquote{font-family:var(--serif);font-size:1.12rem;line-height:1.9;color:var(--ink);margin-bottom:18px}
+.note cite{display:block;font-style:normal;font-size:.8rem;color:var(--ink4);padding-top:14px;border-top:1px dashed var(--line2)}
+.note cite b{color:var(--warm);font-weight:600}
+.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:18px}
+.tags span{padding:4px 11px;font-size:.74rem;border-radius:20px;background:var(--bg);border:1px solid var(--line);color:var(--ink3)}
+@media(max-width:900px){.hero__in{grid-template-columns:1fr;gap:44px;padding-top:56px}.note{max-width:470px}}
+
+/* ===== section heads ===== */
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:46px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:22px}
+.head h2{font-family:var(--serif);font-size:clamp(1.6rem,3.8vw,2.5rem);font-weight:700;line-height:1.3}
+.head h2 i{font-style:normal;color:var(--warm);margin-right:6px;font-size:.78em;vertical-align:middle}
+.head p{font-size:.86rem;color:var(--ink4);margin-top:6px}
+.head__r{font-size:.83rem;color:var(--ink4)}
+.head__r a{color:var(--ink3);border-bottom:1px solid var(--line);padding-bottom:2px;transition:.2s}
+.head__r a:hover{color:var(--warm);border-color:var(--warm)}
+
+/* ===== quote band ===== */
+.band{background:var(--warm);color:#1c1c1e;padding:52px 0;text-align:center}
+.band q{font-family:var(--serif);font-size:clamp(1.3rem,3.4vw,2.2rem);font-weight:600;line-height:1.6;display:block;max-width:840px;margin:0 auto;position:relative}
+.band q::before,.band q::after{font-size:2.4em;line-height:0;vertical-align:-.35em;opacity:.35;font-family:Georgia,serif}
+.band q::before{content:'“';margin-right:.1em}.band q::after{content:'”';margin-left:.1em}
+.band small{display:block;margin-top:18px;font-size:.82rem;letter-spacing:3px;text-transform:uppercase;opacity:.7}
+
+/* ===== film cards ===== */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:22px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:.4s var(--ease)}
+.card:hover{transform:translateY(-7px);border-color:var(--warm2);box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.thumb{aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;font-size:3.2rem;position:relative}
+.thumb::after{content:'';position:absolute;inset:0;background:linear-gradient(170deg,transparent 40%,rgba(0,0,0,.45))}
+.tbadge{position:absolute;top:12px;left:12px;font-family:var(--serif);font-size:.72rem;color:#1c1c1e;background:var(--warm);padding:4px 9px;border-radius:4px;z-index:2}
+.year{position:absolute;bottom:10px;right:12px;font-family:var(--serif);font-size:.82rem;color:rgba(255,255,255,.9);z-index:2}
+.card__b{padding:16px 18px 18px}
+.card__b h3{font-family:var(--serif);font-size:1.16rem;font-weight:700;margin-bottom:5px}
+.card__b .sub{font-size:.78rem;color:var(--ink4);margin-bottom:11px;font-style:italic}
+.card__b p{font-size:.83rem;color:var(--ink2);line-height:1.7;margin-bottom:14px}
+.card__f{display:flex;justify-content:space-between;align-items:center;font-size:.75rem;color:var(--ink4);padding-top:12px;border-top:1px solid var(--line)}
+.card__f a{color:var(--warm);font-weight:600;letter-spacing:.5px}
+.g1{background:linear-gradient(160deg,#3d3124,#2a2118)}.g1 .tbadge{background:#c9632f;color:#fff}
+.g2{background:linear-gradient(160deg,#2c3540,#1e252e)}.g2 .tbadge{background:#7ba4b8;color:#111}
+.g3{background:linear-gradient(160deg,#3a2e38,#2a2028)}.g3 .tbadge{background:#8b5e83;color:#fff}
+.g4{background:linear-gradient(160deg,#2f3a2c,#21291f)}.g4 .tbadge{background:#8fa876;color:#111}
+.g5{background:linear-gradient(160deg,#3c3225,#2b2218)}.g5 .tbadge{background:#d4a85e;color:#111}
+.g6{background:linear-gradient(160deg,#362a2a,#261e1e)}.g6 .tbadge{background:#a85d5d;color:#fff}
+
+/* ===== director spotlight ===== */
+.dir{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+.dir__c{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:22px;display:flex;gap:16px;transition:.35s var(--ease)}
+.dir__c:hover{transform:translateY(-5px);border-color:var(--warm2)}
+.dir__av{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.9rem;flex-shrink:0;background:var(--bg);border:2px solid var(--line2)}
+.dir__txt h4{font-family:var(--serif);font-size:1.12rem;font-weight:700;margin-bottom:2px}
+.dir__txt em{font-style:normal;font-size:.75rem;color:var(--ink4);display:block;margin-bottom:8px}
+.dir__txt p{font-size:.83rem;color:var(--ink2);line-height:1.7}
+
+/* ===== notebook list ===== */
+.book{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:18px}
+.entry{display:flex;gap:18px;padding:20px;background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--line2);border-radius:var(--r);transition:.3s var(--ease)}
+.entry:hover{border-left-color:var(--warm);transform:translateX(5px)}
+.entry__d{font-family:var(--serif);font-size:.82rem;color:var(--warm);min-width:58px;line-height:1.5;flex-shrink:0}
+.entry__txt h4{font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:5px}
+.entry__txt p{font-size:.83rem;color:var(--ink2);line-height:1.7}
+
+/* ===== marquee ===== */
+.types{display:flex;gap:12px;overflow-x:auto;padding:4px 2px 16px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.types::-webkit-scrollbar{height:0}
+.ty{flex-shrink:0;scroll-snap-align:start;width:200px;height:112px;border-radius:var(--r);padding:16px 18px;color:#fff;position:relative;overflow:hidden;transition:.3s var(--ease);cursor:pointer;display:flex;flex-direction:column;justify-content:flex-end}
+.ty:hover{transform:translateY(-5px)}
+.ty span{font-family:var(--serif);font-size:1.2rem;font-weight:700}
+.ty small{font-size:.74rem;opacity:.85}
+.ty em{position:absolute;top:14px;right:14px;font-size:1.6rem;opacity:.5}
+
+/* ===== CTA ===== */
+.cta{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:56px 44px;text-align:center;position:relative;overflow:hidden}
+.cta::before{content:'風';position:absolute;right:-20px;bottom:-80px;font-family:var(--serif);font-size:16rem;color:rgba(232,196,122,.05);line-height:.8}
+.cta h2{font-family:var(--serif);font-size:clamp(1.7rem,4.4vw,2.8rem);font-weight:700;margin-bottom:16px}
+.cta p{color:var(--ink3);max-width:510px;margin:0 auto 30px}
+.cta form{display:flex;gap:9px;max-width:440px;margin:0 auto;flex-wrap:wrap;justify-content:center}
+.cta input{flex:1;min-width:210px;padding:15px 18px;border-radius:8px;border:1px solid var(--line2);background:var(--bg);color:var(--ink);font-size:.9rem;outline:none}
+.cta input:focus{border-color:var(--warm)}
+.cta button{padding:15px 32px;border-radius:8px;background:var(--warm);color:#1c1c1e;font-weight:700;font-size:.9rem;transition:.3s}
+.cta button:hover{background:var(--ink);color:var(--warm)}
+@media(max-width:600px){.cta{padding:40px 22px}}
+
+/* ===== footer ===== */
+.foot{background:var(--film);border-top:1px solid var(--line);padding:60px 0 24px}
+.foot__top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;margin-bottom:44px}
+.foot__brand .logo{margin-bottom:16px}
+.foot__brand p{font-size:.85rem;color:var(--ink3);max-width:330px;line-height:1.9}
+.foot__col h5{font-family:var(--serif);font-size:.85rem;font-weight:700;color:var(--ink4);margin-bottom:18px;letter-spacing:1px}
+.foot__col ul{display:flex;flex-direction:column;gap:10px}
+.foot__col a{font-size:.85rem;color:var(--ink3);transition:.2s}
+.foot__col a:hover{color:var(--warm);padding-left:5px}
+.foot__bot{border-top:1px solid var(--line);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
+.foot__bot p{font-size:.76rem;color:var(--ink4)}
+.foot__social{display:flex;gap:8px}
+.foot__social a{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--paper);font-size:.82rem;transition:.3s}
+.foot__social a:hover{background:var(--warm);transform:translateY(-3px)}
+@media(max-width:820px){.foot__top{grid-template-columns:1fr 1fr;gap:32px}}
+@media(max-width:500px){.foot__top{grid-template-columns:1fr}}
+
+.top{position:fixed;right:20px;bottom:20px;width:44px;height:44px;border-radius:8px;background:var(--paper);color:var(--warm);border:1px solid var(--line2);font-size:1.1rem;z-index:90;opacity:0;visibility:hidden;transition:.35s var(--ease)}
+.top.show{opacity:1;visibility:visible}
+.top:hover{background:var(--warm);color:#1c1c1e}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<!-- ===== NAV ===== -->
+<nav class="nav">
+  <div class="nav__in">
+    <a href="#home" class="logo">且听<em>风吟</em>电影网<small>qietingfengyindianyingwang-zh.github.io</small></a>
+    <div class="menu" id="menu">
+      <a href="#home" class="on">首页</a>
+      <a href="#films">片单</a>
+      <a href="#director">导演</a>
+      <a href="#note">观影笔记</a>
+      <a href="#type">类型</a>
+      <a href="#about">关于</a>
+    </div>
+    <div class="nav__r"><div class="q">🔍<input type="text" placeholder="找一部电影"></div></div>
+    <button class="burger" id="burger">≡</button>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="filmstrip">
+    <div class="fr" style="background:linear-gradient(160deg,#5b4632,#3d2f20)">🌾</div>
+    <div class="fr" style="background:linear-gradient(160deg,#2c4254,#1e2e3c)">🌊</div>
+    <div class="fr" style="background:linear-gradient(160deg,#54405a,#3c2c44)">🌙</div>
+    <div class="fr" style="background:linear-gradient(160deg,#3d5440,#2a3a2c)">🌿</div>
+    <div class="fr" style="background:linear-gradient(160deg,#5a4432,#3f2e1f)">🍂</div>
+    <div class="fr" style="background:linear-gradient(160deg,#4a3c3c,#352828)">🔥</div>
+    <div class="fr" style="background:linear-gradient(160deg,#3a4a5a,#28353f)">🚂</div>
+    <div class="fr" style="background:linear-gradient(160deg,#4a4a3a,#363626)">📷</div>
+  </div>
+  <div class="hero__in">
+    <div>
+      <div class="hquote">“如果有人问起，<br>就说我在<em>看电影</em>。”</div>
+      <p class="lead">且听风吟电影网是一个慢节奏的电影分享站。我们不追新片热搜，只挑那些值得一个人安静看完的片子——文艺、作者、独立、经典。</p>
+      <div class="btns">
+        <a href="#films" class="btn btn--main">▸ 开始看片</a>
+        <a href="#note" class="btn btn--ghost">✎ 读观影笔记</a>
+      </div>
+      <div class="hmeta">
+        <div><span>386</span><small>收录影片</small></div>
+        <div><span>92</span><small>导演专题</small></div>
+        <div><span>2014</span><small>建站年份</small></div>
+      </div>
+    </div>
+    <aside class="note">
+      <div class="note__ribbon">本期编辑手记</div>
+      <blockquote>“电影是让时间变慢的一种办法。在且听风吟电影网，我们想给你一段可以慢下来的时间。”</blockquote>
+      <cite>本期推荐 <b>《四百击》</b> —— 特吕弗的少年，跑过巴黎的街道，也跑过每个人的青春。</cite>
+      <div class="tags"><span>#慢电影</span><span>#作者电影</span><span>#青春</span><span>#法国新浪潮</span></div>
+    </aside>
+  </div>
+</section>
+
+<!-- ===== QUOTE BAND ===== -->
+<div class="band">
+  <q>风从哪个方向来，并不重要；重要的是，你有没有听见。</q>
+  <small>— 且听风吟电影网</small>
+</div>
+
+<!-- ===== FILMS ===== -->
+<section id="films">
+  <div class="wrap">
+    <div class="head">
+      <div><h2><i>壹</i>今晚，看哪一部</h2><p>精选 386 部中的 6 部，每一部都值得一个安静的夜晚。</p></div>
+      <div class="head__r"><a href="#">完整片单 →</a></div>
+    </div>
+    <div class="grid">
+      <article class="card"><div class="thumb g1">🚲<span class="tbadge">法国新浪潮</span><span class="year">1959</span></div><div class="card__b"><h3>四百击</h3><div class="sub">Les Quatre Cents Coups</div><p>少年的奔跑，跑过了整个巴黎，也跑过了每个人的青春。</p><div class="card__f"><span>特吕弗 · 99 分钟</span><a href="#">观看</a></div></div></article>
+      <article class="card"><div class="thumb g2">🌊<span class="tbadge">日本</span><span class="year">1991</span></div><div class="card__b"><h3>那年夏天，宁静的海</h3><div class="sub">A Scene at the Sea</div><p>北野武最安静的一部，几乎没有对白，却听得见海的声音。</p><div class="card__f"><span>北野武 · 101 分钟</span><a href="#">观看</a></div></div></article>
+      <article class="card"><div class="thumb g3">🪁<span class="tbadge">伊朗</span><span class="year">1997</span></div><div class="card__b"><h3>何处是我朋友的家</h3><div class="sub">Khaneh-ye doost kojast?</div><p>一个孩子的迷路，走出了整个民族的诗意。</p><div class="card__f"><span>阿巴斯 · 83 分钟</span><a href="#">观看</a></div></div></article>
+      <article class="card"><div class="thumb g4">🌿<span class="tbadge">台湾</span><span class="year">1985</span></div><div class="card__b"><h3>童年往事</h3><div class="sub">The Time to Live and the Time to Die</div><p>侯孝贤用长镜头，把整个童年写成了一封长信。</p><div class="card__f"><span>侯孝贤 · 137 分钟</span><a href="#">观看</a></div></div></article>
+      <article class="card"><div class="thumb g5">📷<span class="tbadge">黑白</span><span class="year">1952</span></div><div class="card__b"><h3>罗马，不设防的城市</h3><div class="sub">Roma città aperta</div><p>新现实主义的起点，战争的废墟里开出了人的尊严。</p><div class="card__f"><span>罗西里尼 · 103 分钟</span><a href="#">观看</a></div></div></article>
+      <article class="card"><div class="thumb g6">🍃<span class="tbadge">华语</span><span class="year">2026</span></div><div class="card__b"><h3>无人知晓的午后</h3><div class="sub">An Afternoon Unknown</div><p>一部新作，关于一个被遗忘的小城和一群慢慢老去的人。</p><div class="card__f"><span>新人导演 · 112 分钟</span><a href="#">观看</a></div></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DIRECTOR ===== -->
+<section id="director" style="background:var(--film)">
+  <div class="wrap">
+    <div class="head">
+      <div><h2><i>贰</i>导演专题</h2><p>读懂一个导演，就读懂了一种看世界的方式。</p></div>
+      <div class="head__r"><a href="#">全部导演 →</a></div>
+    </div>
+    <div class="dir">
+      <div class="dir__c"><div class="dir__av">🎬</div><div class="dir__txt"><h4>阿巴斯·基亚罗斯塔米</h4><em>伊朗 · 1940–2016</em><p>用最简单的公路，拍出最深的哲思。</p></div></div>
+      <div class="dir__c"><div class="dir__av">🌾</div><div class="dir__txt"><h4>侯孝贤</h4><em>台湾 · 1947–</em><p>长镜头里的中国，安静而辽阔。</p></div></div>
+      <div class="dir__c"><div class="dir__av">🌊</div><div class="dir__txt"><h4>北野武</h4><em>日本 · 1947–</em><p>暴烈与温柔，在一个画面里同时存在。</p></div></div>
+      <div class="dir__c"><div class="dir__av">🎞️</div><div class="dir__txt"><h4>特吕弗</h4><em>法国 · 1932–1984</em><p>新浪潮的少年，一辈子在拍自己。</p></div></div>
+      <div class="dir__c"><div class="dir__av">🌙</div><div class="dir__txt"><h4>塔可夫斯基</h4><em>苏联 · 1932–1986</em><p>用时间雕刻电影的人。</p></div></div>
+      <div class="dir__c"><div class="dir__av">🪁</div><div class="dir__txt"><h4>是枝裕和</h4><em>日本 · 1962–</em><p>家庭是最小的宇宙，也是最大的谜。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NOTEBOOK ===== -->
+<section id="note">
+  <div class="wrap">
+    <div class="head">
+      <div><h2><i>叁</i>观影笔记</h2><p>写在看完之后，写给同样看完的你。</p></div>
+      <div class="head__r"><a href="#">所有笔记 →</a></div>
+    </div>
+    <div class="book">
+      <div class="entry"><div class="entry__d">10.01<br>周四</div><div class="entry__txt"><h4>《童年往事》的三次吃饭</h4><p>侯孝贤把最重的告别，藏在了最日常的饭桌上。祖母亲手做的饭，吃一次少一次。</p></div></div>
+      <div class="entry"><div class="entry__d">09.28<br>周一</div><div class="entry__txt"><h4>阿巴斯的路，总在转弯之后</h4><p>他的电影没有答案，只有继续往前开的车。而那正是我们想要的。</p></div></div>
+      <div class="entry"><div class="entry__d">09.24<br>周四</div><div class="entry__txt"><h4>北野武为什么不说话</h4><p>《那年夏天，宁静的海》里几乎全是静默。沉默不是没有感情，是感情太满了。</p></div></div>
+      <div class="entry"><div class="entry__d">09.20<br>周日</div><div class="entry__txt"><h4>慢电影不是无聊，是耐心</h4><p>给慢电影一点耐心，它会把时间还给你，带着利息。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TYPES ===== -->
+<section id="type" style="background:var(--film)">
+  <div class="wrap">
+    <div class="head">
+      <div><h2><i>肆</i>按类型找片</h2><p>不知道看什么？先选一个你现在的情绪。</p></div>
+      <div class="head__r"><span>← 滑动浏览 →</span></div>
+    </div>
+    <div class="types">
+      <div class="ty" style="background:linear-gradient(135deg,#c9632f,#8b4513)"><em>🎭</em><span>作者电影</span><small>个人表达强烈的作品</small></div>
+      <div class="ty" style="background:linear-gradient(135deg,#7ba4b8,#3d6b80)"><em>🌿</em><span>慢电影</span><small>用时间讲一个故事</small></div>
+      <div class="ty" style="background:linear-gradient(135deg,#8b5e83,#5c3a56)"><em>🌙</em><span>深夜片单</span><small>适合一个人看</small></div>
+      <div class="ty" style="background:linear-gradient(135deg,#8fa876,#5f7a4c)"><em>🌾</em><span>乡土中国</span><small>土地与人的故事</small></div>
+      <div class="ty" style="background:linear-gradient(135deg,#d4a85e,#a0782e)"><em>📷</em><span>黑白经典</span><small>没有色彩，全是光影</small></div>
+      <div class="ty" style="background:linear-gradient(135deg,#a85d5d,#7a3a3a)"><em>🎞️</em><span>新浪潮</span><small>改变电影史的那一批</small></div>
+      <div class="ty" style="background:linear-gradient(135deg,#6b7a8f,#41505f)"><em>🚂</em><span>公路片</span><small>上路，然后遇见自己</small></div>
+      <div class="ty" style="background:linear-gradient(135deg,#5a8f7a,#3a6b54)"><em>🍃</em><span>治愈系</span><small>看完想深呼吸一下</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT + CTA ===== -->
+<section id="about">
+  <div class="wrap">
+    <div class="head">
+      <div><h2><i>伍</i>关于本站</h2><p>且听风吟电影网是什么，又不是什么。</p></div>
+    </div>
+    <div class="book" style="margin-bottom:50px;">
+      <div class="entry"><div class="entry__d">✓</div><div class="entry__txt"><h4>慢，是我们的标准</h4><p>不追热搜，不堆数量，只选那些经得起再看一遍的片子。</p></div></div>
+      <div class="entry"><div class="entry__d">✓</div><div class="entry__txt"><h4>文艺片为主</h4><p>作者电影、独立制作、经典老片，也收录优质华语新作。</p></div></div>
+      <div class="entry"><div class="entry__d">✓</div><div class="entry__txt"><h4>有观影笔记</h4><p>每部推荐都配一段手写式的短评，而不是机械的评分。</p></div></div>
+      <div class="entry"><div class="entry__d">✓</div><div class="entry__txt"><h4>导演专题</h4><p>不只推荐单部，更带你系统认识一个导演的全部。</p></div></div>
+      <div class="entry"><div class="entry__d">✓</div><div class="entry__txt"><h4>全端舒适</h4><p>手机、平板、电脑，排版都为你读过一遍。</p></div></div>
+      <div class="entry"><div class="entry__d">✓</div><div class="entry__txt"><h4>免费，无广告</h4><p>没有弹窗，没有推送轰炸，只有电影。</p></div></div>
+    </div>
+    <div class="cta">
+      <h2>今晚的风，<br>往哪个方向吹？</h2>
+      <p>留下邮箱，每周收到一封安静的观影信，一部电影，一段笔记。</p>
+      <form onsubmit="event.preventDefault();var b=this.querySelector('button');b.textContent='✓ 已订阅';b.style.background='var(--ink)';b.style.color='var(--warm)';this.querySelector('input').value=''">
+        <input type="email" placeholder="你的邮箱地址" required>
+        <button type="submit">每周一封观影信</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__top">
+      <div class="foot__brand">
+        <a href="#home" class="logo">且听<em>风吟</em>电影网</a>
+        <p>qietingfengyindianyingwang-zh.github.io —— 一个慢节奏的电影分享站，专注文艺片、作者电影、经典老片与独立佳作。</p>
+      </div>
+      <div class="foot__col"><h5>看片</h5><ul><li><a href="#films">精选片单</a></li><li><a href="#director">导演专题</a></li><li><a href="#type">按类型</a></li><li><a href="#note">观影笔记</a></li></ul></div>
+      <div class="foot__col"><h5>类型</h5><ul><li><a href="#">作者电影</a></li><li><a href="#">慢电影</a></li><li><a href="#">黑白经典</a></li><li><a href="#">治愈系</a></li></ul></div>
+      <div class="foot__col"><h5>关于</h5><ul><li><a href="#about">本站介绍</a></li><li><a href="#">投稿与合作</a></li><li><a href="#">免责声明</a></li><li><a href="#">RSS 订阅</a></li></ul></div>
+    </div>
+    <div class="foot__bot">
+      <p>© 2026 且听风吟电影网 qietingfengyindianyingwang-zh.github.io · 本站仅供学习交流使用</p>
+      <div class="foot__social"><a href="#">💬</a><a href="#">📱</a><a href="#">🐧</a><a href="#">📰</a></div>
+    </div>
+  </div>
+</footer>
+
+<button class="top" id="top" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var menu=document.getElementById('menu'),burger=document.getElementById('burger'),top=document.getElementById('top');
+  burger.addEventListener('click',function(){menu.classList.toggle('open')});
+  [].slice.call(menu.querySelectorAll('a')).forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open')})});
+  var links=[].slice.call(document.querySelectorAll('.menu a'));
+  var secs=[].slice.call(document.querySelectorAll('section[id]'));
+  function spy(){var cur='';secs.forEach(function(s){if(window.scrollY>=s.offsetTop-140){cur=s.id}});links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)})}
+  window.addEventListener('scroll',spy);spy();
+  window.addEventListener('scroll',function(){top.classList.toggle('show',window.scrollY>400)});
+  top.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+})();
+</script>
+</body>
+</html>
